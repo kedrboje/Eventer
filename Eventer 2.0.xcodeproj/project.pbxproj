@@ -7,23 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52C993A2247D0D19005FFE47 /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C993A1247D0D19005FFE47 /* EventsPresenter.swift */; };
+		52C993A5247D0DB0005FFE47 /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C993A4247D0DB0005FFE47 /* EventsRouter.swift */; };
+		52C993A8247D0E2F005FFE47 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C993A6247D0E2F005FFE47 /* EventCell.swift */; };
+		52C993A9247D0E2F005FFE47 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C993A7247D0E2F005FFE47 /* EventCell.xib */; };
+		52C993AB247D14C2005FFE47 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C993AA247D14C2005FFE47 /* Models.swift */; };
+		C9063DBA244B3EB900755BF5 /* HomeModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9063DB9244B3EB900755BF5 /* HomeModuleConfigurator.swift */; };
+		C9063DBC244B3F4700755BF5 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9063DBB244B3F4700755BF5 /* EventsViewController.swift */; };
+		C9063DBE244B3F5300755BF5 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9063DBD244B3F5300755BF5 /* Events.storyboard */; };
+		C9063DC6244B3FDA00755BF5 /* EventsModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9063DC5244B3FDA00755BF5 /* EventsModuleConfigurator.swift */; };
+		C9063DC9244B409D00755BF5 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9063DC8244B409D00755BF5 /* TrackingViewController.swift */; };
+		C9063DCB244B40AE00755BF5 /* Tracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9063DCA244B40AE00755BF5 /* Tracking.storyboard */; };
+		C9063DCF244B410800755BF5 /* TrackingModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9063DCE244B410800755BF5 /* TrackingModuleConfigurator.swift */; };
+		C9063DD2244B418500755BF5 /* ProfileModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9063DD1244B418500755BF5 /* ProfileModuleConfigurator.swift */; };
+		C9063DD4244B419100755BF5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9063DD3244B419100755BF5 /* ProfileViewController.swift */; };
+		C9063DD6244B419800755BF5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9063DD5244B419800755BF5 /* Profile.storyboard */; };
+		C92DB27024335569005C3DCE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92DB26F24335569005C3DCE /* AuthViewController.swift */; };
+		C92DB27224335571005C3DCE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92DB27124335570005C3DCE /* Auth.storyboard */; };
+		C92DB27524335629005C3DCE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92DB27324335629005C3DCE /* Extensions.swift */; };
 		C98DCCAC2433530600A75BEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98DCCAB2433530600A75BEC /* AppDelegate.swift */; };
 		C98DCCAE2433530600A75BEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98DCCAD2433530600A75BEC /* SceneDelegate.swift */; };
-		C98DCCB02433530600A75BEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98DCCAF2433530600A75BEC /* ViewController.swift */; };
 		C98DCCB32433530600A75BEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98DCCB12433530600A75BEC /* Main.storyboard */; };
 		C98DCCB52433530700A75BEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98DCCB42433530700A75BEC /* Assets.xcassets */; };
 		C98DCCB82433530700A75BEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98DCCB62433530700A75BEC /* LaunchScreen.storyboard */; };
+		C9A77903244B2BEF006CB8C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77902244B2BEF006CB8C4 /* MainViewController.swift */; };
+		C9A77905244B2C31006CB8C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A77904244B2C31006CB8C4 /* Main.storyboard */; };
+		C9A77909244B2C80006CB8C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77908244B2C80006CB8C4 /* HomeViewController.swift */; };
+		C9A7790B244B2CFE006CB8C4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A7790A244B2CFE006CB8C4 /* Home.storyboard */; };
+		C9A77912244B2DBB006CB8C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77911244B2DBB006CB8C4 /* Constants.swift */; };
+		C9A77914244B2E75006CB8C4 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77913244B2E75006CB8C4 /* Session.swift */; };
+		C9A77916244B2E98006CB8C4 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77915244B2E98006CB8C4 /* UserDefaultsWrapper.swift */; };
+		C9A77918244B2F5F006CB8C4 /* AuthModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77917244B2F5F006CB8C4 /* AuthModuleConfigurator.swift */; };
+		C9A7791B244B2FB7006CB8C4 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A7791A244B2FB7006CB8C4 /* AuthRouter.swift */; };
+		C9A7791D244B2FC2006CB8C4 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A7791C244B2FC2006CB8C4 /* AuthPresenter.swift */; };
+		C9A77921244B2FE9006CB8C4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77920244B2FE9006CB8C4 /* Router.swift */; };
+		C9A77923244B3274006CB8C4 /* MainModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77922244B3274006CB8C4 /* MainModuleConfigurator.swift */; };
+		C9A77925244B3A49006CB8C4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77924244B3A49006CB8C4 /* MainPresenter.swift */; };
+		C9A77927244B3A50006CB8C4 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A77926244B3A50006CB8C4 /* MainRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52C993A1247D0D19005FFE47 /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
+		52C993A4247D0DB0005FFE47 /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
+		52C993A6247D0E2F005FFE47 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		52C993A7247D0E2F005FFE47 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		52C993AA247D14C2005FFE47 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		C9063DB9244B3EB900755BF5 /* HomeModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleConfigurator.swift; sourceTree = "<group>"; };
+		C9063DBB244B3F4700755BF5 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		C9063DBD244B3F5300755BF5 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
+		C9063DC5244B3FDA00755BF5 /* EventsModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModuleConfigurator.swift; sourceTree = "<group>"; };
+		C9063DC8244B409D00755BF5 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
+		C9063DCA244B40AE00755BF5 /* Tracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tracking.storyboard; sourceTree = "<group>"; };
+		C9063DCE244B410800755BF5 /* TrackingModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingModuleConfigurator.swift; sourceTree = "<group>"; };
+		C9063DD1244B418500755BF5 /* ProfileModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleConfigurator.swift; sourceTree = "<group>"; };
+		C9063DD3244B419100755BF5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C9063DD5244B419800755BF5 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		C92DB26F24335569005C3DCE /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		C92DB27124335570005C3DCE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		C92DB27324335629005C3DCE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C98DCCA82433530600A75BEC /* Eventer 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eventer 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98DCCAB2433530600A75BEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C98DCCAD2433530600A75BEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C98DCCAF2433530600A75BEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C98DCCB22433530600A75BEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C98DCCB42433530700A75BEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98DCCB72433530700A75BEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98DCCB92433530700A75BEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9A77902244B2BEF006CB8C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C9A77904244B2C31006CB8C4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C9A77908244B2C80006CB8C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C9A7790A244B2CFE006CB8C4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		C9A77911244B2DBB006CB8C4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C9A77913244B2E75006CB8C4 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		C9A77915244B2E98006CB8C4 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
+		C9A77917244B2F5F006CB8C4 /* AuthModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleConfigurator.swift; sourceTree = "<group>"; };
+		C9A7791A244B2FB7006CB8C4 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		C9A7791C244B2FC2006CB8C4 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		C9A77920244B2FE9006CB8C4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C9A77922244B3274006CB8C4 /* MainModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleConfigurator.swift; sourceTree = "<group>"; };
+		C9A77924244B3A49006CB8C4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		C9A77926244B3A50006CB8C4 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +99,120 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52C993A3247D0D20005FFE47 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				52C993A1247D0D19005FFE47 /* EventsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		52C993AC247D1512005FFE47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52C993AA247D14C2005FFE47 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52C993AD247D1519005FFE47 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				52C993AC247D1512005FFE47 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C9063DBF244B3F6C00755BF5 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				52C993A3247D0D20005FFE47 /* Presenter */,
+				C9063DC7244B405000755BF5 /* Configurator */,
+				C9063DC3244B3F9E00755BF5 /* View */,
+				52C993A4247D0DB0005FFE47 /* EventsRouter.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		C9063DC3244B3F9E00755BF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DBB244B3F4700755BF5 /* EventsViewController.swift */,
+				52C993A6247D0E2F005FFE47 /* EventCell.swift */,
+				52C993A7247D0E2F005FFE47 /* EventCell.xib */,
+				C9063DBD244B3F5300755BF5 /* Events.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9063DC4244B3FB000755BF5 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DB9244B3EB900755BF5 /* HomeModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C9063DC7244B405000755BF5 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DC5244B3FDA00755BF5 /* EventsModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C9063DCC244B40CB00755BF5 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DD0244B410D00755BF5 /* Configurator */,
+				C9063DCD244B40E800755BF5 /* View */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		C9063DCD244B40E800755BF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DC8244B409D00755BF5 /* TrackingViewController.swift */,
+				C9063DCA244B40AE00755BF5 /* Tracking.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9063DD0244B410D00755BF5 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DCE244B410800755BF5 /* TrackingModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C9063DD7244B41AF00755BF5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DD8244B41B900755BF5 /* Configurator */,
+				C9063DD9244B41C200755BF5 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C9063DD8244B41B900755BF5 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DD1244B418500755BF5 /* ProfileModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C9063DD9244B41C200755BF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DD3244B419100755BF5 /* ProfileViewController.swift */,
+				C9063DD5244B419800755BF5 /* Profile.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C98DCC9F2433530600A75BEC = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +232,156 @@
 		C98DCCAA2433530600A75BEC /* Eventer 2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				C98DCCAB2433530600A75BEC /* AppDelegate.swift */,
-				C98DCCAD2433530600A75BEC /* SceneDelegate.swift */,
-				C98DCCAF2433530600A75BEC /* ViewController.swift */,
+				C98DCCC12433532A00A75BEC /* Modules */,
+				C98DCCBF2433531200A75BEC /* Helpers */,
+				52C993AD247D1519005FFE47 /* Common */,
+				C98DCCC02433532300A75BEC /* Resources */,
 				C98DCCB12433530600A75BEC /* Main.storyboard */,
-				C98DCCB42433530700A75BEC /* Assets.xcassets */,
 				C98DCCB62433530700A75BEC /* LaunchScreen.storyboard */,
-				C98DCCB92433530700A75BEC /* Info.plist */,
 			);
 			path = "Eventer 2.0";
+			sourceTree = "<group>";
+		};
+		C98DCCBF2433531200A75BEC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C92DB27324335629005C3DCE /* Extensions.swift */,
+				C9A77911244B2DBB006CB8C4 /* Constants.swift */,
+				C9A77913244B2E75006CB8C4 /* Session.swift */,
+				C9A77915244B2E98006CB8C4 /* UserDefaultsWrapper.swift */,
+				C9A77920244B2FE9006CB8C4 /* Router.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C98DCCC02433532300A75BEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C98DCCAB2433530600A75BEC /* AppDelegate.swift */,
+				C98DCCAD2433530600A75BEC /* SceneDelegate.swift */,
+				C98DCCB92433530700A75BEC /* Info.plist */,
+				C98DCCB42433530700A75BEC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C98DCCC12433532A00A75BEC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DBF244B3F6C00755BF5 /* Events */,
+				C9A7790C244B2D02006CB8C4 /* Home */,
+				C9A77906244B2C48006CB8C4 /* Main */,
+				C9A77900244B2AF4006CB8C4 /* Auth */,
+				C9063DCC244B40CB00755BF5 /* Tracking */,
+				C9063DD7244B41AF00755BF5 /* Profile */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C9A77900244B2AF4006CB8C4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C9A77919244B2FA7006CB8C4 /* Configurator */,
+				C9A7791F244B2FD1006CB8C4 /* Router */,
+				C9A7791E244B2FC9006CB8C4 /* Presenter */,
+				C9A77901244B2B01006CB8C4 /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C9A77901244B2B01006CB8C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C92DB26F24335569005C3DCE /* AuthViewController.swift */,
+				C92DB27124335570005C3DCE /* Auth.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9A77906244B2C48006CB8C4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C9A77928244B3A54006CB8C4 /* Configurator */,
+				C9A77929244B3A5C006CB8C4 /* Presenter */,
+				C9A7792A244B3A62006CB8C4 /* Router */,
+				C9A77907244B2C4F006CB8C4 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C9A77907244B2C4F006CB8C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9A77902244B2BEF006CB8C4 /* MainViewController.swift */,
+				C9A77904244B2C31006CB8C4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9A7790C244B2D02006CB8C4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C9063DC4244B3FB000755BF5 /* Configurator */,
+				C9A7790D244B2D09006CB8C4 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C9A7790D244B2D09006CB8C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9A77908244B2C80006CB8C4 /* HomeViewController.swift */,
+				C9A7790A244B2CFE006CB8C4 /* Home.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9A77919244B2FA7006CB8C4 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C9A77917244B2F5F006CB8C4 /* AuthModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C9A7791E244B2FC9006CB8C4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C9A7791C244B2FC2006CB8C4 /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C9A7791F244B2FD1006CB8C4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C9A7791A244B2FB7006CB8C4 /* AuthRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C9A77928244B3A54006CB8C4 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C9A77922244B3274006CB8C4 /* MainModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C9A77929244B3A5C006CB8C4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C9A77924244B3A49006CB8C4 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C9A7792A244B3A62006CB8C4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C9A77926244B3A50006CB8C4 /* MainRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +442,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92DB27224335571005C3DCE /* Auth.storyboard in Resources */,
+				C9A77905244B2C31006CB8C4 /* Main.storyboard in Resources */,
+				C9063DBE244B3F5300755BF5 /* Events.storyboard in Resources */,
 				C98DCCB82433530700A75BEC /* LaunchScreen.storyboard in Resources */,
+				C9A7790B244B2CFE006CB8C4 /* Home.storyboard in Resources */,
+				C9063DCB244B40AE00755BF5 /* Tracking.storyboard in Resources */,
+				C9063DD6244B419800755BF5 /* Profile.storyboard in Resources */,
 				C98DCCB52433530700A75BEC /* Assets.xcassets in Resources */,
+				52C993A9247D0E2F005FFE47 /* EventCell.xib in Resources */,
 				C98DCCB32433530600A75BEC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +462,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C98DCCB02433530600A75BEC /* ViewController.swift in Sources */,
+				C92DB27524335629005C3DCE /* Extensions.swift in Sources */,
+				C9A77927244B3A50006CB8C4 /* MainRouter.swift in Sources */,
+				52C993A5247D0DB0005FFE47 /* EventsRouter.swift in Sources */,
+				C9A77916244B2E98006CB8C4 /* UserDefaultsWrapper.swift in Sources */,
+				C92DB27024335569005C3DCE /* AuthViewController.swift in Sources */,
 				C98DCCAC2433530600A75BEC /* AppDelegate.swift in Sources */,
+				52C993A2247D0D19005FFE47 /* EventsPresenter.swift in Sources */,
+				C9063DC9244B409D00755BF5 /* TrackingViewController.swift in Sources */,
+				C9A7791D244B2FC2006CB8C4 /* AuthPresenter.swift in Sources */,
+				C9A77923244B3274006CB8C4 /* MainModuleConfigurator.swift in Sources */,
 				C98DCCAE2433530600A75BEC /* SceneDelegate.swift in Sources */,
+				C9063DCF244B410800755BF5 /* TrackingModuleConfigurator.swift in Sources */,
+				C9A77918244B2F5F006CB8C4 /* AuthModuleConfigurator.swift in Sources */,
+				C9A77914244B2E75006CB8C4 /* Session.swift in Sources */,
+				C9A77912244B2DBB006CB8C4 /* Constants.swift in Sources */,
+				C9A77925244B3A49006CB8C4 /* MainPresenter.swift in Sources */,
+				C9A7791B244B2FB7006CB8C4 /* AuthRouter.swift in Sources */,
+				C9063DD4244B419100755BF5 /* ProfileViewController.swift in Sources */,
+				C9063DC6244B3FDA00755BF5 /* EventsModuleConfigurator.swift in Sources */,
+				C9063DD2244B418500755BF5 /* ProfileModuleConfigurator.swift in Sources */,
+				52C993A8247D0E2F005FFE47 /* EventCell.swift in Sources */,
+				C9A77903244B2BEF006CB8C4 /* MainViewController.swift in Sources */,
+				C9A77909244B2C80006CB8C4 /* HomeViewController.swift in Sources */,
+				C9A77921244B2FE9006CB8C4 /* Router.swift in Sources */,
+				52C993AB247D14C2005FFE47 /* Models.swift in Sources */,
+				C9063DBA244B3EB900755BF5 /* HomeModuleConfigurator.swift in Sources */,
+				C9063DBC244B3F4700755BF5 /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +634,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4Q95QYK8;
-				INFOPLIST_FILE = "Eventer 2.0/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Eventer 2.0/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +652,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6J4Q95QYK8;
-				INFOPLIST_FILE = "Eventer 2.0/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Eventer 2.0/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

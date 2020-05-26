@@ -1,20 +1,19 @@
 //
-//  ViewController.swift
+//  TrackingViewController.swift
 //  Eventer 2.0
 //
-//  Created by Федор Рубченков on 31.03.2020.
+//  Created by Федор Рубченков on 18.04.2020.
 //  Copyright © 2020 Федор Рубченков. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class TrackingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-
