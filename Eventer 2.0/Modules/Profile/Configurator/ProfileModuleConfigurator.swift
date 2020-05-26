@@ -13,6 +13,10 @@ final class ProfileModuleConfigurator {
     static func configure() -> ProfileViewController {
         
         let view = ProfileViewController.controllerFromStoryboard(.profile)
+        let presenter = ProfilePresenter()
+        
+        presenter.view = view
+        view.presenter = presenter
         
         return view
     }

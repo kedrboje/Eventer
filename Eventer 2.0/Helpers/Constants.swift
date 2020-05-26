@@ -9,21 +9,21 @@
 import Foundation
 
 enum Storyboards: String {
-    case main = "Main"
-    case auth = "Auth"
-    case home = "Home"
-    case events = "Events"
+    case main     = "Main"
+    case auth     = "Auth"
+    case events   = "Events"
     case tracking = "Tracking"
-    case profile = "Profile"
+    case profile  = "Profile"
+    case create   = "Create"
 }
 
 // MARK:- PersistantKeys enum
 enum PersistantKeys {
     
-    static let token            = "kToken"
     static let isAuthorizationSkipped = "kIsAuthorizationSkipped"
     static let customerName = "kCustomerName"
-    static let customerPhoneNumber = "kCustomerPhoneNumber"
-
-    
+    static let isAuthorized = "kIsAAuthorized"
+    static let isNotFirstLaunch = "kIsNotFirstLaunch"
+    static let login = "kUserName"
+    static let pwd = "kPassword"
 }

@@ -8,23 +8,35 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+protocol ProfileViewProtocol: class {
+    func updateUserInfo(firstName: String?, lastName: String?, position: String?)
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class ProfileViewController: UIViewController, ProfileViewProtocol {
 
-        // Do any additional setup after loading the view.
+    var presenter: ProfilePresenterProtocol?
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBAction func logOutPressed(_ sender: Any) {
+        presenter?.onLogOut?()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.viewLoaded()
     }
-    */
-
+    
+    func updateUserInfo(firstName: String?, lastName: String?, position: String?) {
+        firstNameLabel.text = firstName
+        lastNameLabel.text = lastName
+        positionLabel.text = position
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 }

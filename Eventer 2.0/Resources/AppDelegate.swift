@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case .main:
             window.rootViewController = UINavigationController(rootViewController: LaunchInstructor.performMainFlow())
         }
-
-        UITabBar.appearance().isTranslucent = false
+        
         self.window = window
         self.window?.makeKeyAndVisible()
         return true
@@ -39,8 +38,8 @@ enum LaunchInstructor {
         switch (Session.isAuthorized, Session.isAuthorizationSkipped) {
         case (false, false):
             return .authorization
-        case (true, true):
-            return .main
+        case (false, true):
+            return .authorization
         default:
             return .main
         }

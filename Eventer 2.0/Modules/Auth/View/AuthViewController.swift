@@ -15,13 +15,22 @@ protocol AuthViewProtocol: class {
 class AuthViewController: UIViewController, ModuleTransitionable, AuthViewProtocol {
     
     var presenter: AuthPresenterProtocol?
+    var credentials: Credentials?
 
     @IBOutlet weak var loginTextField: TextField!
     @IBOutlet weak var passwordTextField: TextField!
     @IBAction func loginButtonPressed(_ sender: Any) {
-//        TODO: for test
-//        presenter?.onLogin?()
-        presenter?.onSkip?()
+        guard let login = loginTextField.text,
+            let pwd = passwordTextField.text,
+            !login.isEmpty,
+            !pwd.isEmpty else {
+            let alert = UIAlertController(title: "Warning", message: "Incorrect login or password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        credentials = Credentials(login, pwd)
+        presenter?.onLogin?(credentials!)
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
         presenter?.onSkip?()
@@ -39,11 +48,6 @@ class AuthViewController: UIViewController, ModuleTransitionable, AuthViewProtoc
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     private func setupViews() {

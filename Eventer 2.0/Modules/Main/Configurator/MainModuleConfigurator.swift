@@ -13,7 +13,7 @@ final class MainModuleConfigurator {
     static func configure() -> MainViewController {
         
         let view = MainViewController.controllerFromStoryboard(.main)
-        view.homeController = HomeModuleConfigurator.configure()
+        view.createViewController = CreateNewEventModuleConfigurator.configure()
         view.eventsController = EventsModuleConfigurator.configure()
         view.trackingController = TrackingModuleConfigurator.configure()
         view.profileController = ProfileModuleConfigurator.configure()

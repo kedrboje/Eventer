@@ -7,12 +7,19 @@
 //
 
 import Foundation
+import KeychainSwift
 
 typealias Credentials = (username: String, password: String)
 
 struct Session {
+    
     static var isAuthorized: Bool {
-        return UserDefaultsWrapper.token != nil
+        let keychain = KeychainSwift()
+        keychain.synchronizable = false
+        if let _ = keychain.get(PersistantKeys.pwd), let _ = keychain.get(PersistantKeys.login) {
+            return true
+        }
+        return false
     }
     
     static var isAuthorizationSkipped: Bool {
@@ -22,6 +29,11 @@ struct Session {
         set {
             UserDefaultsWrapper.isAuthorizationSkipped = newValue
         }
+    }
+    
+    static var isNotFirstLaunch: Bool {
+        get { return UserDefaultsWrapper.isNotFirstLaunch }
+        set { UserDefaultsWrapper.isNotFirstLaunch = newValue }
     }
 
 }

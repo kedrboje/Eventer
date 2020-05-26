@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="FNT-9M-HKs">
             <objects>
-                <tabBarController storyboardIdentifier="MainViewController" id="7lS-Hh-7CH" customClass="MainViewController" customModule="Eventer_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewController2" id="7lS-Hh-7CH" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kNJ-a6-pHy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,6 +20,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rc6-r1-UAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-746" y="-192"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="LWb-e8-2ps">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="8yV-3G-7yP" customClass="MainViewController" customModule="Eventer_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WoB-jm-pDa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZx-ib-MXA">
+                                <rect key="frame" x="30" y="782" width="354" height="80"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.14901960780000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="xRm-HE-Fm8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nZx-ib-MXA" firstAttribute="bottom" secondItem="vHA-kp-zXi" secondAttribute="bottom" id="4wN-wf-2ed"/>
+                            <constraint firstItem="vHA-kp-zXi" firstAttribute="trailing" secondItem="nZx-ib-MXA" secondAttribute="trailing" constant="30" id="Axw-o0-AMk"/>
+                            <constraint firstItem="nZx-ib-MXA" firstAttribute="leading" secondItem="vHA-kp-zXi" secondAttribute="leading" constant="30" id="cEa-bR-7fd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vHA-kp-zXi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLM-MZ-YLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201.44927536231884" y="-199.55357142857142"/>
         </scene>
     </scenes>
 </document>

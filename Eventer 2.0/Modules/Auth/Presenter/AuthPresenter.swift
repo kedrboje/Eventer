@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import KeychainSwift
 
 protocol AuthPresenterProtocol {
     func viewLoaded()
@@ -27,6 +28,10 @@ final class AuthPresenter: AuthPresenterProtocol {
     
     private func setupCompletions() {
         onLogin = { [unowned self] credentials in
+            let keychain = KeychainSwift()
+            keychain.synchronizable = false
+            keychain.set(credentials.username, forKey: PersistantKeys.login)
+            keychain.set(credentials.password, forKey: PersistantKeys.pwd)
             self.router?.showMain()
         }
         onSkip = { [unowned self] in
