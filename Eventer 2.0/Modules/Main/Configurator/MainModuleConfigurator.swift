@@ -19,7 +19,6 @@ final class MainModuleConfigurator {
         view.profileController = ProfileModuleConfigurator.configure()
         
         return view
-        
     }
-    
+
 }

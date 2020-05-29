@@ -7,4 +7,7 @@ target 'Eventer 2.0' do
 
   # Pods for Eventer 2.0
   pod 'KeychainSwift'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+
 end

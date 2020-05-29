@@ -15,6 +15,7 @@ enum Storyboards: String {
     case tracking = "Tracking"
     case profile  = "Profile"
     case create   = "Create"
+    case signUp   = "SignUp"
 }
 
 // MARK:- PersistantKeys enum
@@ -24,6 +25,6 @@ enum PersistantKeys {
     static let customerName = "kCustomerName"
     static let isAuthorized = "kIsAAuthorized"
     static let isNotFirstLaunch = "kIsNotFirstLaunch"
-    static let login = "kUserName"
+    static let email = "kEmail"
     static let pwd = "kPassword"
 }

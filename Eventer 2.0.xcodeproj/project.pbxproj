@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		525B33D3247ECC7000FFFE45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525B33D2247ECC7000FFFE45 /* GoogleService-Info.plist */; };
+		525B33D5247ED2E700FFFE45 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525B33D4247ED2E700FFFE45 /* SignUp.storyboard */; };
+		525B33D7247ED2F800FFFE45 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B33D6247ED2F800FFFE45 /* SignUpViewController.swift */; };
+		525B33D9247ED37000FFFE45 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B33D8247ED37000FFFE45 /* SignUpPresenter.swift */; };
+		525B33DB247ED3BA00FFFE45 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B33DA247ED3BA00FFFE45 /* SignUpRouter.swift */; };
+		525B33DE247EEDF000FFFE45 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B33DD247EEDF000FFFE45 /* ProfileRouter.swift */; };
 		52BC34F1247D315300DE14B2 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC34F0247D315300DE14B2 /* ProfilePresenter.swift */; };
 		52BC34F3247D417F00DE14B2 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC34F2247D417F00DE14B2 /* CreateViewController.swift */; };
 		52BC34F7247D420A00DE14B2 /* CreateNewModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC34F6247D420A00DE14B2 /* CreateNewModuleConfigurator.swift */; };
@@ -50,6 +56,12 @@
 
 /* Begin PBXFileReference section */
 		1B9CB110D644233E573937BB /* Pods-Eventer 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventer 2.0.debug.xcconfig"; path = "Target Support Files/Pods-Eventer 2.0/Pods-Eventer 2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		525B33D2247ECC7000FFFE45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		525B33D4247ED2E700FFFE45 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		525B33D6247ED2F800FFFE45 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		525B33D8247ED37000FFFE45 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		525B33DA247ED3BA00FFFE45 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		525B33DD247EEDF000FFFE45 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		52BC34F0247D315300DE14B2 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		52BC34F2247D417F00DE14B2 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		52BC34F6247D420A00DE14B2 /* CreateNewModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewModuleConfigurator.swift; sourceTree = "<group>"; };
@@ -121,6 +133,22 @@
 				D7700756F15DCD8971A52A91 /* Pods_Eventer_2_0.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		525B33DC247EEDE400FFFE45 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				52BC34F0247D315300DE14B2 /* ProfilePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		525B33DF247EEDF700FFFE45 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				525B33DD247EEDF000FFFE45 /* ProfileRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		52BC34F4247D41EC00DE14B2 /* CreateNewEvent */ = {
@@ -224,7 +252,8 @@
 		C9063DD7244B41AF00755BF5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				52BC34F0247D315300DE14B2 /* ProfilePresenter.swift */,
+				525B33DF247EEDF700FFFE45 /* Router */,
+				525B33DC247EEDE400FFFE45 /* Presenter */,
 				C9063DD8244B41B900755BF5 /* Configurator */,
 				C9063DD9244B41C200755BF5 /* View */,
 			);
@@ -297,6 +326,7 @@
 				C98DCCAB2433530600A75BEC /* AppDelegate.swift */,
 				C98DCCAD2433530600A75BEC /* SceneDelegate.swift */,
 				C98DCCB92433530700A75BEC /* Info.plist */,
+				525B33D2247ECC7000FFFE45 /* GoogleService-Info.plist */,
 				C98DCCB42433530700A75BEC /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -331,6 +361,8 @@
 			children = (
 				C92DB26F24335569005C3DCE /* AuthViewController.swift */,
 				C92DB27124335570005C3DCE /* Auth.storyboard */,
+				525B33D4247ED2E700FFFE45 /* SignUp.storyboard */,
+				525B33D6247ED2F800FFFE45 /* SignUpViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A7791C244B2FC2006CB8C4 /* AuthPresenter.swift */,
+				525B33D8247ED37000FFFE45 /* SignUpPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -375,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A7791A244B2FB7006CB8C4 /* AuthRouter.swift */,
+				525B33DA247ED3BA00FFFE45 /* SignUpRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -465,12 +499,14 @@
 			files = (
 				52BC34FB247D42FB00DE14B2 /* Create.storyboard in Resources */,
 				C92DB27224335571005C3DCE /* Auth.storyboard in Resources */,
+				525B33D5247ED2E700FFFE45 /* SignUp.storyboard in Resources */,
 				C9A77905244B2C31006CB8C4 /* Main.storyboard in Resources */,
 				C9063DBE244B3F5300755BF5 /* Events.storyboard in Resources */,
 				C98DCCB82433530700A75BEC /* LaunchScreen.storyboard in Resources */,
 				C9063DCB244B40AE00755BF5 /* Tracking.storyboard in Resources */,
 				C9063DD6244B419800755BF5 /* Profile.storyboard in Resources */,
 				C98DCCB52433530700A75BEC /* Assets.xcassets in Resources */,
+				525B33D3247ECC7000FFFE45 /* GoogleService-Info.plist in Resources */,
 				52C993A9247D0E2F005FFE47 /* EventCell.xib in Resources */,
 				C98DCCB32433530600A75BEC /* Main.storyboard in Resources */,
 			);
@@ -525,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525B33DE247EEDF000FFFE45 /* ProfileRouter.swift in Sources */,
 				C92DB27524335629005C3DCE /* Extensions.swift in Sources */,
 				C9A77927244B3A50006CB8C4 /* MainRouter.swift in Sources */,
 				52C993A5247D0DB0005FFE47 /* EventsRouter.swift in Sources */,
@@ -541,7 +578,9 @@
 				52BC34F7247D420A00DE14B2 /* CreateNewModuleConfigurator.swift in Sources */,
 				C9A77918244B2F5F006CB8C4 /* AuthModuleConfigurator.swift in Sources */,
 				C9A77914244B2E75006CB8C4 /* Session.swift in Sources */,
+				525B33D7247ED2F800FFFE45 /* SignUpViewController.swift in Sources */,
 				C9A77912244B2DBB006CB8C4 /* Constants.swift in Sources */,
+				525B33D9247ED37000FFFE45 /* SignUpPresenter.swift in Sources */,
 				C9A77925244B3A49006CB8C4 /* MainPresenter.swift in Sources */,
 				C9A7791B244B2FB7006CB8C4 /* AuthRouter.swift in Sources */,
 				C9063DD4244B419100755BF5 /* ProfileViewController.swift in Sources */,
@@ -551,6 +590,7 @@
 				C9A77903244B2BEF006CB8C4 /* MainViewController.swift in Sources */,
 				C9A77921244B2FE9006CB8C4 /* Router.swift in Sources */,
 				52C993AB247D14C2005FFE47 /* Models.swift in Sources */,
+				525B33DB247ED3BA00FFFE45 /* SignUpRouter.swift in Sources */,
 				52BC34F3247D417F00DE14B2 /* CreateViewController.swift in Sources */,
 				C9063DBC244B3F4700755BF5 /* EventsViewController.swift in Sources */,
 			);

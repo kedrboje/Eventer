@@ -12,7 +12,7 @@ protocol ProfileViewProtocol: class {
     func updateUserInfo(firstName: String?, lastName: String?, position: String?)
 }
 
-class ProfileViewController: UIViewController, ProfileViewProtocol {
+class ProfileViewController: UIViewController, ProfileViewProtocol, ModuleTransitionable {
 
     var presenter: ProfilePresenterProtocol?
     

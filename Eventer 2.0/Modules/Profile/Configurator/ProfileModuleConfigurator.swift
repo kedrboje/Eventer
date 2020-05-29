@@ -14,9 +14,12 @@ final class ProfileModuleConfigurator {
         
         let view = ProfileViewController.controllerFromStoryboard(.profile)
         let presenter = ProfilePresenter()
+        let router = ProfileRouter()
         
         presenter.view = view
         view.presenter = presenter
+        presenter.router = router
+        router.view = view
         
         return view
     }

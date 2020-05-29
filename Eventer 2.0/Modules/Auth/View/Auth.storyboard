@@ -42,14 +42,14 @@
                                     <constraint firstItem="gH4-Tv-aHh" firstAttribute="centerY" secondItem="H7w-Lc-yNB" secondAttribute="centerY" id="wxc-gO-AeH"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" clearsOnBeginEditing="YES" minimumFontSize="18" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="YCT-uH-MAh" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" minimumFontSize="18" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="YCT-uH-MAh" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
                                 <rect key="frame" x="32" y="292" width="350" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hCz-Ys-SVf"/>
                                 </constraints>
                                 <color key="textColor" red="0.098039215690000001" green="0.14901960780000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
@@ -109,7 +109,7 @@
                                     <constraint firstAttribute="height" constant="93" id="PbE-9Z-bZ5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Skip" backgroundImage="Rectangle 3">
+                                <state key="normal" title="Sign up" backgroundImage="Rectangle 3">
                                     <color key="titleColor" red="0.098039215690000001" green="0.14901960780000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -141,7 +141,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="loginTextField" destination="YCT-uH-MAh" id="kYm-Bp-oVO"/>
+                        <outlet property="email" destination="YCT-uH-MAh" id="kYm-Bp-oVO"/>
                         <outlet property="passwordTextField" destination="icN-Wc-OBW" id="pCS-EC-BK0"/>
                     </connections>
                 </viewController>

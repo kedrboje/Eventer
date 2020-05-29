@@ -10,6 +10,7 @@ import Foundation
 
 protocol AuthRouterProtocol {
     func showMain()
+    func showSignUp()
 }
 
 final class AuthRouter: AuthRouterProtocol {
@@ -19,5 +20,8 @@ final class AuthRouter: AuthRouterProtocol {
     func showMain() {
         view?.setRoot(module: LaunchInstructor.performMainFlow(), animated: true)
     }
-    
+    func showSignUp() {
+//        view?.push(module: AuthModuleConfigurator.configureSignUP(), animated: true)
+        view?.presentModule(AuthModuleConfigurator.configureSignUP(), animated: true, completion: nil)
+    }
 }

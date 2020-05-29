@@ -8,11 +8,12 @@
 
 import Foundation
 import KeychainSwift
+import Firebase
 
 protocol AuthPresenterProtocol {
     func viewLoaded()
-    var onLogin: ((Credentials)->())? { get set }
-    var onSkip: (()->())? { get set }
+    var onLogin:  ((Credentials)->())? { get set }
+    var onSignUp: (()->())? { get set }
 }
 
 final class AuthPresenter: AuthPresenterProtocol {
@@ -20,7 +21,7 @@ final class AuthPresenter: AuthPresenterProtocol {
     weak var view: AuthViewProtocol?
     var router: AuthRouterProtocol?
     var onLogin: ((Credentials)->())?
-    var onSkip: (() -> ())?
+    var onSignUp: (()->())?
 
     func viewLoaded() {
         setupCompletions()
@@ -28,14 +29,20 @@ final class AuthPresenter: AuthPresenterProtocol {
     
     private func setupCompletions() {
         onLogin = { [unowned self] credentials in
-            let keychain = KeychainSwift()
-            keychain.synchronizable = false
-            keychain.set(credentials.username, forKey: PersistantKeys.login)
-            keychain.set(credentials.password, forKey: PersistantKeys.pwd)
-            self.router?.showMain()
+            Auth.auth().signIn(withEmail: credentials.email, password: credentials.password) { [weak self] (res, error) in
+                if let e = error {
+                    self?.view?.showAlert(text: e.localizedDescription)
+                } else {
+                    let keychain = KeychainSwift()
+                    keychain.synchronizable = false
+                    keychain.set(credentials.email, forKey: PersistantKeys.email)
+                    keychain.set(credentials.password, forKey: PersistantKeys.pwd)
+                    self?.router?.showMain()
+                }
+            }
         }
-        onSkip = { [unowned self] in
-            self.router?.showMain()
+        onSignUp = { [unowned self] in
+            self.router?.showSignUp()
         }
     }
 }

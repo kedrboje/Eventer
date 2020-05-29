@@ -31,10 +31,10 @@ class MainViewController: UITabBarController {
         let profile = UINavigationController(rootViewController: profileController!)
         let create = UINavigationController(rootViewController: createViewController!)
         
-        events.tabBarItem = UITabBarItem(title: "Events", image: #imageLiteral(resourceName: "eventsButton"), selectedImage: nil)
-        tracking.tabBarItem = UITabBarItem(title: "Tracking", image: #imageLiteral(resourceName: "trackingButton"), selectedImage: nil)
-        create.tabBarItem = UITabBarItem(title: "Create", image: #imageLiteral(resourceName: "creaete"), selectedImage: nil)
-        profile.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "profileButton"), selectedImage: nil)
+        events.tabBarItem = UITabBarItem(title: "Events", image: #imageLiteral(resourceName: "events"), selectedImage: nil)
+        tracking.tabBarItem = UITabBarItem(title: "Tracking", image: #imageLiteral(resourceName: "track"), selectedImage: nil)
+        create.tabBarItem = UITabBarItem(title: "Create", image: #imageLiteral(resourceName: "create"), selectedImage: nil)
+        profile.tabBarItem = UITabBarItem(title: "Profile", image: #imageLiteral(resourceName: "profeile"), selectedImage: nil)
         
         self.viewControllers = [events, create, tracking, profile]
     }

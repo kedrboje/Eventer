@@ -24,4 +24,17 @@ class AuthModuleConfigurator {
         return view
     }
     
+    static func configureSignUP() -> SignUpViewController {
+        
+        let view = SignUpViewController.controllerFromStoryboard(.signUp)
+        let router = SignUpRouter()
+        let presenter = SignUpPresenter()
+        
+        view.presenter = presenter
+        presenter.view = view
+        router.view = view
+        
+        return view
+    }
+    
 }

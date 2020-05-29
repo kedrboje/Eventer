@@ -9,14 +9,14 @@
 import Foundation
 import KeychainSwift
 
-typealias Credentials = (username: String, password: String)
+typealias Credentials = (email: String, password: String)
 
 struct Session {
     
     static var isAuthorized: Bool {
         let keychain = KeychainSwift()
         keychain.synchronizable = false
-        if let _ = keychain.get(PersistantKeys.pwd), let _ = keychain.get(PersistantKeys.login) {
+        if let _ = keychain.get(PersistantKeys.pwd), let _ = keychain.get(PersistantKeys.email) {
             return true
         }
         return false

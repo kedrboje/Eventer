@@ -8,6 +8,7 @@
 
 import Foundation
 import KeychainSwift
+import Firebase
 
 protocol ProfilePresenterProtocol {
     func viewLoaded()
@@ -17,6 +18,7 @@ protocol ProfilePresenterProtocol {
 final class ProfilePresenter: ProfilePresenterProtocol {
     
     weak var view: ProfileViewProtocol?
+    var router: ProfileRouterProtocol?
     
     var onLogOut: (()->Void)?
     
@@ -27,13 +29,14 @@ final class ProfilePresenter: ProfilePresenterProtocol {
     
     fileprivate func setupCompletions() {
         onLogOut = { [weak self] in
+            try? Auth.auth().signOut()
             KeychainSwift().clear()
-            self?.loadCredentials()
+            self?.router?.showAuth()
         }
     }
     
     fileprivate func loadCredentials() {
-        guard let userName = KeychainSwift().get(PersistantKeys.login) else {
+        guard let userName = KeychainSwift().get(PersistantKeys.email) else {
             view?.updateUserInfo(firstName: nil, lastName: nil, position: nil)
             return
         }
