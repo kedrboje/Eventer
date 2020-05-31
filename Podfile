@@ -9,5 +9,5 @@ target 'Eventer 2.0' do
   pod 'KeychainSwift'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-
+  pod 'CodableFirebase'
 end

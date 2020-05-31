@@ -9,8 +9,9 @@
 import Foundation
 
 struct Event: Codable {
-    var title: String
-    var data: String
+    var name: String
+    var date: String
     var room: String
     var time: String
+    var id: String
 }

@@ -14,13 +14,13 @@ final class CreateNewEventModuleConfigurator {
     static func configure() -> CreateViewController {
         
         let view = CreateViewController.controllerFromStoryboard(.create)
-//        let presenter = EventsPresenter()
+        let presenter = CreatePresenter()
 //        let router = EventsRouter()
         
-//        presenter.view = view
+        presenter.view = view
 //        presenter.router = router
 //        router.view = view
-//        view.presenter = presenter
+        view.presenter = presenter
         
         return view
     }

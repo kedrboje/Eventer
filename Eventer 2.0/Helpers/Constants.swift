@@ -16,6 +16,7 @@ enum Storyboards: String {
     case profile  = "Profile"
     case create   = "Create"
     case signUp   = "SignUp"
+    case detail   = "DetailEvent"
 }
 
 // MARK:- PersistantKeys enum

@@ -13,9 +13,11 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var reference: DatabaseReference!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        reference = Database.database().reference()
         let window = UIWindow()
         let app = UITabBar.appearance()
         app.barTintColor = #colorLiteral(red: 0.87964499, green: 0.8826124072, blue: 0.873254478, alpha: 1)

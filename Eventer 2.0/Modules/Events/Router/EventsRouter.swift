@@ -9,7 +9,7 @@
 import Foundation
 
 protocol EventsRouterProtocol {
-    
+    func showDetail(event: Event)
 }
 
 
@@ -18,5 +18,9 @@ final class EventsRouter: EventsRouterProtocol {
     weak var view: ModuleTransitionable?
     var configurator: EventsModuleConfigurator?
     
+    
+    func showDetail(event: Event) {
+        view?.push(module: DetailEventModuleConfigurator.configure(with: event), animated: true)
+    }
     
 }

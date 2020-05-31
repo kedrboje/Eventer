@@ -9,10 +9,10 @@
 import UIKit
 
 protocol EventsViewProtocol: class {
-    
+    func update()
 }
 
-class EventsViewController: UIViewController, ModuleTransitionable , EventsViewProtocol {
+class EventsViewController: UIViewController, ModuleTransitionable {
 
     @IBOutlet weak var tableVIew: UITableView!
     var presenter: EventsPresenterProtocol?
@@ -26,6 +26,7 @@ class EventsViewController: UIViewController, ModuleTransitionable , EventsViewP
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        update()
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
@@ -46,9 +47,20 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! EventCell
         guard let data = presenter?.cellData?[indexPath.row] else { return UITableViewCell() }
-        cell.configure(title: data.title, data: data.data, time: data.time, room: data.room)
+        cell.configure(title: data.name, data: data.date, time: data.time, room: String(data.room))
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let event = presenter?.cellData?[indexPath.row] else { return }
+        presenter?.onEvent?(event)
+    }
     
+}
+
+
+extension EventsViewController: EventsViewProtocol {
+    func update() {
+        tableVIew.reloadData()
+    }
 }

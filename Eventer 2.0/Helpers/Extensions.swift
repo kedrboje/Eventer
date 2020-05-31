@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 extension UIView {
     @IBInspectable var cornerRadius: CGFloat {

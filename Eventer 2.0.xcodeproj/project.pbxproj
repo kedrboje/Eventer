@@ -13,6 +13,12 @@
 		525B33D9247ED37000FFFE45 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B33D8247ED37000FFFE45 /* SignUpPresenter.swift */; };
 		525B33DB247ED3BA00FFFE45 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B33DA247ED3BA00FFFE45 /* SignUpRouter.swift */; };
 		525B33DE247EEDF000FFFE45 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B33DD247EEDF000FFFE45 /* ProfileRouter.swift */; };
+		525D0240248412FB00B2B7AC /* DetailEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D023F248412FB00B2B7AC /* DetailEvents.swift */; };
+		525D02442484134800B2B7AC /* DetailEventModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D02432484134800B2B7AC /* DetailEventModuleConfigurator.swift */; };
+		525D02472484135E00B2B7AC /* DetailEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D02462484135E00B2B7AC /* DetailEventPresenter.swift */; };
+		525D024A248413D300B2B7AC /* DetailEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525D0249248413D300B2B7AC /* DetailEvent.storyboard */; };
+		525D024C24841E0A00B2B7AC /* DetailEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D024B24841E0A00B2B7AC /* DetailEventRouter.swift */; };
+		52A40E052483E707003C5CF5 /* CreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A40E042483E707003C5CF5 /* CreatePresenter.swift */; };
 		52BC34F1247D315300DE14B2 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC34F0247D315300DE14B2 /* ProfilePresenter.swift */; };
 		52BC34F3247D417F00DE14B2 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC34F2247D417F00DE14B2 /* CreateViewController.swift */; };
 		52BC34F7247D420A00DE14B2 /* CreateNewModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC34F6247D420A00DE14B2 /* CreateNewModuleConfigurator.swift */; };
@@ -62,6 +68,12 @@
 		525B33D8247ED37000FFFE45 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		525B33DA247ED3BA00FFFE45 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		525B33DD247EEDF000FFFE45 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		525D023F248412FB00B2B7AC /* DetailEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEvents.swift; sourceTree = "<group>"; };
+		525D02432484134800B2B7AC /* DetailEventModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventModuleConfigurator.swift; sourceTree = "<group>"; };
+		525D02462484135E00B2B7AC /* DetailEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventPresenter.swift; sourceTree = "<group>"; };
+		525D0249248413D300B2B7AC /* DetailEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailEvent.storyboard; sourceTree = "<group>"; };
+		525D024B24841E0A00B2B7AC /* DetailEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventRouter.swift; sourceTree = "<group>"; };
+		52A40E042483E707003C5CF5 /* CreatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresenter.swift; sourceTree = "<group>"; };
 		52BC34F0247D315300DE14B2 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		52BC34F2247D417F00DE14B2 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		52BC34F6247D420A00DE14B2 /* CreateNewModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewModuleConfigurator.swift; sourceTree = "<group>"; };
@@ -151,11 +163,80 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		525D0241248412FF00B2B7AC /* DetailEvent */ = {
+			isa = PBXGroup;
+			children = (
+				525D02482484136800B2B7AC /* Presenter */,
+				525D02422484130E00B2B7AC /* View */,
+				525D02452484134B00B2B7AC /* Configurator */,
+				525D024D24841E0E00B2B7AC /* Router */,
+			);
+			path = DetailEvent;
+			sourceTree = "<group>";
+		};
+		525D02422484130E00B2B7AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				525D023F248412FB00B2B7AC /* DetailEvents.swift */,
+				525D0249248413D300B2B7AC /* DetailEvent.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		525D02452484134B00B2B7AC /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				525D02432484134800B2B7AC /* DetailEventModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		525D02482484136800B2B7AC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				525D02462484135E00B2B7AC /* DetailEventPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		525D024D24841E0E00B2B7AC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				525D024B24841E0A00B2B7AC /* DetailEventRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		52A40E062483E70C003C5CF5 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				52BC34F6247D420A00DE14B2 /* CreateNewModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		52A40E072483E71A003C5CF5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				52A40E042483E707003C5CF5 /* CreatePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		52A40E082484040E003C5CF5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				52C993A4247D0DB0005FFE47 /* EventsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		52BC34F4247D41EC00DE14B2 /* CreateNewEvent */ = {
 			isa = PBXGroup;
 			children = (
 				52BC34F5247D41FA00DE14B2 /* VIew */,
-				52BC34F6247D420A00DE14B2 /* CreateNewModuleConfigurator.swift */,
+				52A40E062483E70C003C5CF5 /* Configurator */,
+				52A40E072483E71A003C5CF5 /* Presenter */,
 			);
 			path = CreateNewEvent;
 			sourceTree = "<group>";
@@ -199,7 +280,7 @@
 				52C993A3247D0D20005FFE47 /* Presenter */,
 				C9063DC7244B405000755BF5 /* Configurator */,
 				C9063DC3244B3F9E00755BF5 /* View */,
-				52C993A4247D0DB0005FFE47 /* EventsRouter.swift */,
+				52A40E082484040E003C5CF5 /* Router */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -341,6 +422,7 @@
 				C9A77900244B2AF4006CB8C4 /* Auth */,
 				C9063DCC244B40CB00755BF5 /* Tracking */,
 				C9063DD7244B41AF00755BF5 /* Profile */,
+				525D0241248412FF00B2B7AC /* DetailEvent */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -498,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BC34FB247D42FB00DE14B2 /* Create.storyboard in Resources */,
+				525D024A248413D300B2B7AC /* DetailEvent.storyboard in Resources */,
 				C92DB27224335571005C3DCE /* Auth.storyboard in Resources */,
 				525B33D5247ED2E700FFFE45 /* SignUp.storyboard in Resources */,
 				C9A77905244B2C31006CB8C4 /* Main.storyboard in Resources */,
@@ -561,6 +644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525D024C24841E0A00B2B7AC /* DetailEventRouter.swift in Sources */,
 				525B33DE247EEDF000FFFE45 /* ProfileRouter.swift in Sources */,
 				C92DB27524335629005C3DCE /* Extensions.swift in Sources */,
 				C9A77927244B3A50006CB8C4 /* MainRouter.swift in Sources */,
@@ -571,10 +655,12 @@
 				52C993A2247D0D19005FFE47 /* EventsPresenter.swift in Sources */,
 				C9063DC9244B409D00755BF5 /* TrackingViewController.swift in Sources */,
 				C9A7791D244B2FC2006CB8C4 /* AuthPresenter.swift in Sources */,
+				525D02442484134800B2B7AC /* DetailEventModuleConfigurator.swift in Sources */,
 				C9A77923244B3274006CB8C4 /* MainModuleConfigurator.swift in Sources */,
 				52BC34F1247D315300DE14B2 /* ProfilePresenter.swift in Sources */,
 				C98DCCAE2433530600A75BEC /* SceneDelegate.swift in Sources */,
 				C9063DCF244B410800755BF5 /* TrackingModuleConfigurator.swift in Sources */,
+				52A40E052483E707003C5CF5 /* CreatePresenter.swift in Sources */,
 				52BC34F7247D420A00DE14B2 /* CreateNewModuleConfigurator.swift in Sources */,
 				C9A77918244B2F5F006CB8C4 /* AuthModuleConfigurator.swift in Sources */,
 				C9A77914244B2E75006CB8C4 /* Session.swift in Sources */,
@@ -585,6 +671,8 @@
 				C9A7791B244B2FB7006CB8C4 /* AuthRouter.swift in Sources */,
 				C9063DD4244B419100755BF5 /* ProfileViewController.swift in Sources */,
 				C9063DC6244B3FDA00755BF5 /* EventsModuleConfigurator.swift in Sources */,
+				525D02472484135E00B2B7AC /* DetailEventPresenter.swift in Sources */,
+				525D0240248412FB00B2B7AC /* DetailEvents.swift in Sources */,
 				C9063DD2244B418500755BF5 /* ProfileModuleConfigurator.swift in Sources */,
 				52C993A8247D0E2F005FFE47 /* EventCell.swift in Sources */,
 				C9A77903244B2BEF006CB8C4 /* MainViewController.swift in Sources */,
