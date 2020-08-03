@@ -15,3 +15,7 @@ struct Event: Codable {
     var time: String
     var id: String
 }
+
+struct Animal {
+    let name: String
+}
