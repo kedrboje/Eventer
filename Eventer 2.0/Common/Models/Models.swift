@@ -16,6 +16,6 @@ struct Event: Codable {
     var id: String
 }
 
-struct Animal {
-    let name: String
+struct Badge: Codable {
+    
 }
