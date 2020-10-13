@@ -17,5 +17,21 @@ struct Event: Codable {
 }
 
 struct Badge: Codable {
+    var badgeName: String
+    var rssiOne: Double
+    var rssiTwo: Double
+    var rssiThree: Double
+    var distanceOne: Double
+    var distanceTwo: Double
+    var distanceThree: Double
     
+    enum CodingKeys: String, CodingKey {
+        case badgeName = "BadgeName"
+        case rssiOne = "RSSI1"
+        case rssiTwo = "RSSI2"
+        case rssiThree = "RSSI3"
+        case distanceOne = "distance_1"
+        case distanceTwo = "distance_2"
+        case distanceThree = "distance_3"
+    }
 }

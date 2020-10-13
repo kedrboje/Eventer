@@ -14,6 +14,10 @@ final class TrackingModuleConfigurator {
         
         let view = TrackingViewController.controllerFromStoryboard(.tracking)
         
+        let presenter = TrackingPresenter()
+        view.presenter = presenter
+        presenter.view = view
+
         return view
     }
     

@@ -18,6 +18,7 @@
 		525D02472484135E00B2B7AC /* DetailEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D02462484135E00B2B7AC /* DetailEventPresenter.swift */; };
 		525D024A248413D300B2B7AC /* DetailEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525D0249248413D300B2B7AC /* DetailEvent.storyboard */; };
 		525D024C24841E0A00B2B7AC /* DetailEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D024B24841E0A00B2B7AC /* DetailEventRouter.swift */; };
+		5297FEDE253629A200522ADA /* TrackingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5297FEDD253629A200522ADA /* TrackingPresenter.swift */; };
 		52A40E052483E707003C5CF5 /* CreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A40E042483E707003C5CF5 /* CreatePresenter.swift */; };
 		52BC34F1247D315300DE14B2 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC34F0247D315300DE14B2 /* ProfilePresenter.swift */; };
 		52BC34F3247D417F00DE14B2 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC34F2247D417F00DE14B2 /* CreateViewController.swift */; };
@@ -73,6 +74,7 @@
 		525D02462484135E00B2B7AC /* DetailEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventPresenter.swift; sourceTree = "<group>"; };
 		525D0249248413D300B2B7AC /* DetailEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailEvent.storyboard; sourceTree = "<group>"; };
 		525D024B24841E0A00B2B7AC /* DetailEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventRouter.swift; sourceTree = "<group>"; };
+		5297FEDD253629A200522ADA /* TrackingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingPresenter.swift; sourceTree = "<group>"; };
 		52A40E042483E707003C5CF5 /* CreatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePresenter.swift; sourceTree = "<group>"; };
 		52BC34F0247D315300DE14B2 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		52BC34F2247D417F00DE14B2 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		5297FEE0253629AE00522ADA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5297FEDD253629A200522ADA /* TrackingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		52A40E062483E70C003C5CF5 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +317,7 @@
 		C9063DCC244B40CB00755BF5 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				5297FEE0253629AE00522ADA /* Presenter */,
 				C9063DD0244B410D00755BF5 /* Configurator */,
 				C9063DCD244B40E800755BF5 /* View */,
 			);
@@ -653,6 +664,7 @@
 				C92DB27024335569005C3DCE /* AuthViewController.swift in Sources */,
 				C98DCCAC2433530600A75BEC /* AppDelegate.swift in Sources */,
 				52C993A2247D0D19005FFE47 /* EventsPresenter.swift in Sources */,
+				5297FEDE253629A200522ADA /* TrackingPresenter.swift in Sources */,
 				C9063DC9244B409D00755BF5 /* TrackingViewController.swift in Sources */,
 				C9A7791D244B2FC2006CB8C4 /* AuthPresenter.swift in Sources */,
 				525D02442484134800B2B7AC /* DetailEventModuleConfigurator.swift in Sources */,
