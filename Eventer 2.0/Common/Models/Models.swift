@@ -12,7 +12,8 @@ struct Event: Codable {
     var name: String
     var date: String
     var room: String
-    var time: String
+    var startTime: String
+    var endTime: String
     var id: String
 }
 

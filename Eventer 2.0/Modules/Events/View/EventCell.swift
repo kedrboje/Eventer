@@ -12,18 +12,20 @@ class EventCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var roomLabel: UILabel!
+    @IBOutlet weak var endTimeLabel: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
     }
     
-    func configure(title: String, data: String, time: String, room: String){
+    func configure(title: String, data: String, startTime: String, endTime: String, room: String){
         titleLabel.text = title
         dataLabel.text = data
-        timeLabel.text = time
+        startTimeLabel.text = startTime
         roomLabel.text = room
+        endTimeLabel.text = endTime
     }
 }

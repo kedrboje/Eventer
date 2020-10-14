@@ -26,7 +26,7 @@ final class CreatePresenter: CreatePresenterProtocol {
     private func setupCompletions() {
         onCreateEvent = { [weak self] event in
             let id = UUID().uuidString
-            Database.database().reference().child("events").child(id).setValue(["name":event.name, "date":event.date, "time":event.time, "room":event.room, "id": id])
+            Database.database().reference().child("events").child(id).setValue(["name":event.name, "date":event.date, "startTime":event.startTime, "room":event.room, "id": id])
             self?.view?.showAlert(title: "Success", text: "Event successfully created")
             self?.view?.clearFields()
         }

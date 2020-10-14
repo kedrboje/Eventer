@@ -26,10 +26,6 @@ final class TrackingViewController: UIViewController {
     private var bottomRigthBase: UIImageView!
     private var badgeView: UIImageView!
     
-    private var rssiOne: UILabel!
-    private var rssiTwo: UILabel!
-    private var rssiThree: UILabel!
-    
     private let width = UIScreen.main.bounds.width
     private let height = UIScreen.main.bounds.height
     
@@ -64,19 +60,10 @@ private extension TrackingViewController {
     func evntrSetup() {
         setupMap()
         setupBases()
-        setupInfo()
         setupBadgeView()
     }
     
     func evntLayout(){
-        guard let bg = self.badge else { return }
-        rssiOne.sizeToFit()
-        rssiTwo.sizeToFit()
-        rssiThree.sizeToFit()
-        rssiOne.frame = CGRect(x: 16, y: mapContainer.frame.maxY + 16, width: rssiOne.frame.width, height: rssiOne.frame.height)
-        rssiTwo.frame = CGRect(x: 16, y: rssiOne.frame.maxY + 8, width: rssiTwo.frame.width, height: rssiTwo.frame.height)
-        rssiThree.frame = CGRect(x: 16, y: rssiTwo.frame.maxY + 8, width: rssiThree.frame.width, height: rssiThree.frame.height)
-        
         guard let x = getBadgeX(), let y = getBadgeY() else { return }
         badgeView.frame = CGRect(x: x, y: y, width: 20, height: 20)
     }
@@ -111,21 +98,6 @@ private extension TrackingViewController {
         bottomRigthBase.frame = CGRect(x: mapContainer.frame.width - 24, y: mapContainer.frame.height - 24, width: 24, height: 24)
     }
     
-    func setupInfo() {
-        rssiOne = UILabel()
-        rssiOne.numberOfLines = 1
-        rssiOne.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 12)
-        view.addSubview(rssiOne)
-        rssiTwo = UILabel()
-        rssiTwo.numberOfLines = 1
-        rssiTwo.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 12)
-        view.addSubview(rssiTwo)
-        rssiThree = UILabel()
-        rssiThree.numberOfLines = 1
-        rssiThree.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 12)
-        view.addSubview(rssiThree)
-    }
-    
     func getBadgeX() -> CGFloat? {
         guard let b = self.badge else { return nil }
         let numerator = CGFloat(b.distanceOne) * CGFloat(b.distanceOne) - CGFloat(b.distanceTwo) * CGFloat(b.distanceTwo) + mapContainer.frame.width * mapContainer.frame.width
@@ -146,9 +118,6 @@ private extension TrackingViewController {
 extension TrackingViewController: TrackingViewProtocol {
     func proccessBadgePosition(badge: Badge) {
         self.badge = badge
-        rssiOne.text = "RSSI 1: " + String(describing: badge.rssiOne)
-        rssiTwo.text = "RSSI 2: " + String(describing: badge.rssiTwo)
-        rssiThree.text = "RSSI 3: " + String(describing: badge.rssiThree)
         evntLayout()
     }
 }

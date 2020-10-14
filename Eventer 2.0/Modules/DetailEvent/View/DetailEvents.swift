@@ -17,8 +17,9 @@ class DetailEvents: UIViewController, ModuleTransitionable, DetailEventsViewProt
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var roomLabel: UILabel!
+    @IBOutlet weak var endTimeLabel: UILabel!
     @IBAction func deleteTapped(_ sender: Any) {
         showAnswerAlert(title: "Warning", text: "Do you really want to remove this event?", completion: { [weak self] _ in self?.presenter?.onDelete?() })
     }
@@ -43,7 +44,7 @@ class DetailEvents: UIViewController, ModuleTransitionable, DetailEventsViewProt
     func configure(with event: Event) {
         nameLabel.text = event.name
         dateLabel.text = event.date
-        timeLabel.text = event.time
+        startTimeLabel.text = event.startTime
         roomLabel.text = event.room
     }
     

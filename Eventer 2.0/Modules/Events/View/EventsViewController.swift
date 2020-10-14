@@ -47,7 +47,7 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! EventCell
         guard let data = presenter?.cellData?[indexPath.row] else { return UITableViewCell() }
-        cell.configure(title: data.name, data: data.date, time: data.time, room: String(data.room))
+        cell.configure(title: data.name, data: data.date, startTime: data.startTime, endTime: data.endTime, room: String(data.room))
         return cell
     }
     
