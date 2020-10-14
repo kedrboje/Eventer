@@ -15,6 +15,7 @@ protocol TrackingViewProtocol: class {
 final class TrackingViewController: UIViewController {
     
     var presenter: TrackingPresenterProtocol?
+    var xValue: CGFloat?
     
     /// single badge for the test
     private var badge: Badge?
@@ -22,8 +23,6 @@ final class TrackingViewController: UIViewController {
     private var mapContainer: UIView!
     private var topLeftBase: UIImageView!
     private var topRightBase: UIImageView!
-    private var bottomLeftBase: UIImageView!
-    private var bottomRigthBase: UIImageView!
     private var badgeView: UIImageView!
     
     private let width = UIScreen.main.bounds.width
@@ -77,6 +76,8 @@ private extension TrackingViewController {
     func setupMap() {
         mapContainer = UIView()
         mapContainer.backgroundColor = .clear
+        mapContainer.layer.borderWidth = 1.0
+        mapContainer.layer.borderColor = UIColor.green.cgColor
         view.addSubview(mapContainer)
         mapContainer.frame = CGRect(x: 20, y: 100, width: width - 40, height: height - 300)
     }
@@ -84,24 +85,18 @@ private extension TrackingViewController {
     func setupBases() {
         topLeftBase = UIImageView(image: UIImage(named: "base"))
         topRightBase = UIImageView(image: UIImage(named: "base"))
-        bottomLeftBase = UIImageView(image: UIImage(named: "base"))
-        bottomRigthBase = UIImageView(image: UIImage(named: "base"))
         
         mapContainer.addSubview(topLeftBase)
         mapContainer.addSubview(topRightBase)
-        mapContainer.addSubview(bottomLeftBase)
-        mapContainer.addSubview(bottomRigthBase)
         
         topLeftBase.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
         topRightBase.frame = CGRect(x: mapContainer.frame.width - 24, y: 0, width: 24, height: 24)
-        bottomLeftBase.frame = CGRect(x: 0, y: mapContainer.frame.height - 24, width: 24, height: 24)
-        bottomRigthBase.frame = CGRect(x: mapContainer.frame.width - 24, y: mapContainer.frame.height - 24, width: 24, height: 24)
     }
     
     func getBadgeX() -> CGFloat? {
-        guard let b = self.badge else { return nil }
-        let numerator = CGFloat(b.distanceOne) * CGFloat(b.distanceOne) - CGFloat(b.distanceTwo) * CGFloat(b.distanceTwo) + mapContainer.frame.width * mapContainer.frame.width
-        let denominator = 2 * mapContainer.frame.width
+        guard let b = self.badge, let xValue = xValue else { return nil }
+        let numerator = xValue * xValue + CGFloat(b.distanceOne) * CGFloat(b.distanceOne) - CGFloat()
+        let denominator = 2 * xValue
         return numerator/denominator
     }
     
