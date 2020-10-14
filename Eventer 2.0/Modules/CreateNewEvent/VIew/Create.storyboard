@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="CreateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aaG-6Y-msF" customClass="CreateViewController" customModule="Eventer_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2n6-Dn-4Wc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Epc-td-h88">
-                                <rect key="frame" x="32" y="48" width="200" height="50"/>
+                                <rect key="frame" x="32" y="92" width="200" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="BH1-oc-vqf">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="50"/>
@@ -42,10 +44,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-M7-N1u">
-                                <rect key="frame" x="15" y="128" width="570" height="413"/>
+                                <rect key="frame" x="15" y="172" width="384" height="573"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="18" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="1rt-EL-xoT" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="0.0" width="510" height="50"/>
+                                        <rect key="frame" x="30" y="0.0" width="324" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="r8I-k7-GRp"/>
                                         </constraints>
@@ -65,7 +67,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" minimumFontSize="18" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="tac-vg-ytb" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="80" width="510" height="50"/>
+                                        <rect key="frame" x="30" y="80" width="324" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Np5-zM-Tpv"/>
                                         </constraints>
@@ -84,8 +86,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Time" minimumFontSize="18" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="swF-VR-Qkk" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="160" width="510" height="50"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start Time" minimumFontSize="18" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="swF-VR-Qkk" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="160" width="324" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="UCY-dh-inu"/>
                                         </constraints>
@@ -104,8 +106,22 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="End Time" textAlignment="natural" minimumFontSize="17" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="LOQ-cs-ScA" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="240" width="324" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RJi-js-yHZ"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="insetX">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Room" textAlignment="natural" minimumFontSize="18" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Zw4-3M-6pd" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="240" width="510" height="50"/>
+                                        <rect key="frame" x="30" y="320" width="324" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="KXm-zQ-rkm"/>
                                         </constraints>
@@ -124,8 +140,25 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Room Wall Width" textAlignment="natural" minimumFontSize="17" background="backShadow" translatesAutoresizingMaskIntoConstraints="NO" id="hX5-D3-2Sf" customClass="TextField" customModule="Eventer_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="400" width="324" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="U5E-vV-Ngk"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="insetX">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ge-vA-sj8">
-                                        <rect key="frame" x="199" y="320" width="172" height="93"/>
+                                        <rect key="frame" x="106" y="480" width="172" height="93"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="93" id="m31-UW-rbp"/>
                                             <constraint firstAttribute="width" constant="172" id="nuz-uF-zHO"/>
@@ -140,10 +173,14 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="hX5-D3-2Sf" firstAttribute="leading" secondItem="FXv-M7-N1u" secondAttribute="leading" constant="30" id="5ha-t6-cny"/>
                                     <constraint firstAttribute="trailing" secondItem="swF-VR-Qkk" secondAttribute="trailing" constant="30" id="AsT-XM-lF8"/>
                                     <constraint firstItem="1rt-EL-xoT" firstAttribute="leading" secondItem="FXv-M7-N1u" secondAttribute="leading" constant="30" id="Mtx-Nn-aiZ"/>
                                     <constraint firstItem="swF-VR-Qkk" firstAttribute="leading" secondItem="FXv-M7-N1u" secondAttribute="leading" constant="30" id="Yht-s9-bzw"/>
+                                    <constraint firstAttribute="trailing" secondItem="hX5-D3-2Sf" secondAttribute="trailing" constant="30" id="ahD-fN-IGz"/>
+                                    <constraint firstAttribute="trailing" secondItem="LOQ-cs-ScA" secondAttribute="trailing" constant="30" id="blo-9d-FvS"/>
                                     <constraint firstItem="Zw4-3M-6pd" firstAttribute="leading" secondItem="FXv-M7-N1u" secondAttribute="leading" constant="30" id="eNX-r8-ehJ"/>
+                                    <constraint firstItem="LOQ-cs-ScA" firstAttribute="leading" secondItem="FXv-M7-N1u" secondAttribute="leading" constant="30" id="ebu-wE-MQF"/>
                                     <constraint firstAttribute="trailing" secondItem="1rt-EL-xoT" secondAttribute="trailing" constant="30" id="fwD-u2-v74"/>
                                     <constraint firstAttribute="trailing" secondItem="tac-vg-ytb" secondAttribute="trailing" constant="30" id="jxh-QI-49I"/>
                                     <constraint firstItem="tac-vg-ytb" firstAttribute="leading" secondItem="FXv-M7-N1u" secondAttribute="leading" constant="30" id="q6y-FC-yAQ"/>
@@ -168,8 +205,10 @@
                     </view>
                     <connections>
                         <outlet property="dateTextField" destination="tac-vg-ytb" id="t1e-Af-lB4"/>
+                        <outlet property="endTimeTextField" destination="LOQ-cs-ScA" id="T4j-aR-Zp6"/>
                         <outlet property="nameTextField" destination="1rt-EL-xoT" id="3bl-cQ-vEB"/>
-                        <outlet property="roomTextField" destination="Zw4-3M-6pd" id="Tr8-sC-Hga"/>
+                        <outlet property="roomNumberTextField" destination="Zw4-3M-6pd" id="Tr8-sC-Hga"/>
+                        <outlet property="roomWallWidth" destination="hX5-D3-2Sf" id="Xh6-EN-7bQ"/>
                         <outlet property="startTimeTextField" destination="swF-VR-Qkk" id="h5g-9C-Npq"/>
                     </connections>
                 </viewController>
@@ -183,6 +222,26 @@
             <point key="canvasLocation" x="425" y="-225"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1rt-EL-xoT">
+            <size key="intrinsicContentSize" width="47.5" height="23"/>
+        </designable>
+        <designable name="LOQ-cs-ScA">
+            <size key="intrinsicContentSize" width="75.5" height="23"/>
+        </designable>
+        <designable name="Zw4-3M-6pd">
+            <size key="intrinsicContentSize" width="46.5" height="23"/>
+        </designable>
+        <designable name="hX5-D3-2Sf">
+            <size key="intrinsicContentSize" width="137" height="23"/>
+        </designable>
+        <designable name="swF-VR-Qkk">
+            <size key="intrinsicContentSize" width="84" height="23"/>
+        </designable>
+        <designable name="tac-vg-ytb">
+            <size key="intrinsicContentSize" width="38" height="23"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Logo" width="43" height="50"/>
         <image name="Rectangle 3" width="151" height="82"/>

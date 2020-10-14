@@ -8,10 +8,14 @@
 
 import Foundation
 
+struct EventWrapped: Codable {
+    var events: [Event]
+}
+
 struct Event: Codable {
     var name: String
     var date: String
-    var room: String
+    var room: Room
     var startTime: String
     var endTime: String
     var id: String
@@ -35,4 +39,9 @@ struct Badge: Codable {
         case distanceTwo = "distance_2"
         case distanceThree = "distance_3"
     }
+}
+
+struct Room: Codable {
+    var roomNumber: Int
+    var roomWallValue: Double
 }

@@ -12,10 +12,11 @@ protocol TrackingViewProtocol: class {
     func proccessBadgePosition(badge: Badge)
 }
 
-final class TrackingViewController: UIViewController {
+final class TrackingViewController: UIViewController, ModuleTransitionable {
     
     var presenter: TrackingPresenterProtocol?
     var xValue: CGFloat?
+    var yValue = 20
     
     /// single badge for the test
     private var badge: Badge?
@@ -64,12 +65,14 @@ private extension TrackingViewController {
     
     func evntLayout(){
         guard let x = getBadgeX(), let y = getBadgeY() else { return }
-        badgeView.frame = CGRect(x: x, y: y, width: 20, height: 20)
+        badgeView.frame = CGRect(x: 35*x, y: 35*y, width: 20, height: 20)
     }
     
     func setupBadgeView() {
         badgeView = UIImageView(image: UIImage(named: "badge"))
-        view.addSubview(badgeView)
+        badgeView.image = badgeView.image?.withRenderingMode(.alwaysTemplate)
+        badgeView.tintColor = .red
+        mapContainer.addSubview(badgeView)
         badgeView.frame = .zero
     }
     
@@ -95,16 +98,15 @@ private extension TrackingViewController {
     
     func getBadgeX() -> CGFloat? {
         guard let b = self.badge, let xValue = xValue else { return nil }
-        let numerator = xValue * xValue + CGFloat(b.distanceOne) * CGFloat(b.distanceOne) - CGFloat()
+        let numerator = xValue * xValue + CGFloat(b.distanceTwo) * CGFloat(b.distanceTwo) - CGFloat(b.distanceThree) * CGFloat(b.distanceThree)
         let denominator = 2 * xValue
         return numerator/denominator
     }
     
     func getBadgeY() -> CGFloat? {
         guard let b = self.badge, let x = getBadgeX() else { return nil }
-        let numerator = CGFloat(b.distanceTwo) * CGFloat(b.distanceTwo) - CGFloat(b.distanceThree) * CGFloat(b.distanceThree) - mapContainer.frame.width * mapContainer.frame.width + 2 * mapContainer.frame.width * x + mapContainer.frame.height * mapContainer.frame.height
-        let denominator = 2 * mapContainer.frame.height
-        return numerator/denominator
+        let result = pow(CGFloat(b.distanceTwo) * CGFloat(b.distanceTwo) - x * x, 0.5)
+        return result
     }
     
 }

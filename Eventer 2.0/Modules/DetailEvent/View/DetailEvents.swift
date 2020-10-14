@@ -45,7 +45,7 @@ class DetailEvents: UIViewController, ModuleTransitionable, DetailEventsViewProt
         nameLabel.text = event.name
         dateLabel.text = event.date
         startTimeLabel.text = event.startTime
-        roomLabel.text = event.room
+        roomLabel.text = String(describing: event.room.roomNumber)
     }
     
     func showAlert(title: String, text: String, completion: ((UIAlertAction)->Void)?) {

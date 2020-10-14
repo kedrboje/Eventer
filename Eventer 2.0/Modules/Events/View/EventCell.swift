@@ -21,11 +21,11 @@ class EventCell: UITableViewCell {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30))
     }
     
-    func configure(title: String, data: String, startTime: String, endTime: String, room: String){
+    func configure(title: String, data: String, startTime: String, endTime: String, roomNumbber: String){
         titleLabel.text = title
         dataLabel.text = data
         startTimeLabel.text = startTime
-        roomLabel.text = room
+        roomLabel.text = roomNumbber
         endTimeLabel.text = endTime
     }
 }

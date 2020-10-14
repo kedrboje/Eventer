@@ -16,7 +16,8 @@ protocol TrackingPresenterProtocol {
 
 final class TrackingPresenter: TrackingPresenterProtocol {
 
-    weak var view: TrackingViewProtocol?
+    weak var view: TrackingViewProtocol!
+    var router: TrackingRouterProtocol!
     var badge: Badge?
     
     private var database: DatabaseReference { return Database.database().reference() }

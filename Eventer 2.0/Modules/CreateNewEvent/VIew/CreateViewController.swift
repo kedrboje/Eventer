@@ -19,7 +19,8 @@ class CreateViewController: UIViewController, ModuleTransitionable {
     @IBOutlet weak var dateTextField: TextField!
     @IBOutlet weak var startTimeTextField: TextField!
     @IBOutlet weak var endTimeTextField: TextField!
-    @IBOutlet weak var roomTextField: TextField!
+    @IBOutlet weak var roomNumberTextField: TextField!
+    @IBOutlet weak var roomWallWidth: TextField!
     @IBAction func createEvent(_ sender: Any) { createEvent() }
     @IBAction func tapToDismiss(_ sender: Any) { view.endEditing(true) }
     
@@ -40,7 +41,7 @@ class CreateViewController: UIViewController, ModuleTransitionable {
         nameTextField.attributedPlaceholder = NSAttributedString(string: "Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.102, green: 0.149, blue: 0.224, alpha: 1)])
         dateTextField.attributedPlaceholder = NSAttributedString(string: "Date", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.102, green: 0.149, blue: 0.224, alpha: 1)])
         startTimeTextField.attributedPlaceholder = NSAttributedString(string: "Time", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.102, green: 0.149, blue: 0.224, alpha: 1)])
-        roomTextField.attributedPlaceholder = NSAttributedString(string: "Room", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.102, green: 0.149, blue: 0.224, alpha: 1)])
+        roomNumberTextField.attributedPlaceholder = NSAttributedString(string: "Room", attributes: [NSAttributedString.Key.foregroundColor: UIColor.init(red: 0.102, green: 0.149, blue: 0.224, alpha: 1)])
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
         datePicker.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
@@ -67,11 +68,22 @@ class CreateViewController: UIViewController, ModuleTransitionable {
         guard let name = nameTextField.text, !name.isEmpty,
             let date = dateTextField.text, !date.isEmpty,
             let time = startTimeTextField.text, !time.isEmpty,
-            let room = roomTextField.text, !room.isEmpty else {
+            let roomNumber = roomNumberTextField.text, !roomNumber.isEmpty,
+            let roomWidth = roomWallWidth.text, !roomWidth.isEmpty,
+            let endTome = endTimeTextField.text, !endTome.isEmpty else {
                 showAlert(title: "Warning!", text: "Incorrect data")
                 return
         }
-        let event = Event(name: name, date: date, room: room, startTime: time, endTime: time, id: "")
+        guard let roomNum = Int(roomNumber) else {
+            showAlert(title: "Waring", text: "Incorrect number of room")
+            return
+        }
+        guard let roomValue = Double(roomWidth) else {
+            showAlert(title: "Warning", text: "Incorrect width of room")
+            return
+        }
+        let roomModel = Room(roomNumber: roomNum, roomWallValue: roomValue)
+        let event = Event(name: name, date: date, room: roomModel, startTime: time, endTime: endTome, id: "")
         presenter?.onCreateEvent?(event)
     }
 }
@@ -86,6 +98,6 @@ extension CreateViewController: CreateViewProtocol {
         nameTextField.text = nil
         dateTextField.text = nil
         startTimeTextField.text = nil
-        roomTextField.text = nil
+        roomNumberTextField.text = nil
     }
 }

@@ -15,7 +15,7 @@ final class MainModuleConfigurator {
         let view = MainViewController.controllerFromStoryboard(.main)
         view.createViewController = CreateNewEventModuleConfigurator.configure()
         view.eventsController = EventsModuleConfigurator.configure()
-        view.trackingController = TrackingModuleConfigurator.configure()
+        view.trackingController = TrackingModuleConfigurator.configureInitialTracking()
         view.profileController = ProfileModuleConfigurator.configure()
         
         return view
