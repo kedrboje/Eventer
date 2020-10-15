@@ -28,10 +28,23 @@ final class EventsPresenter: EventsPresenterProtocol {
     func viewLoaded() {
         setupObserver()
         setupCompletions()
+        Database.database().reference().observeSingleEvent(of: .value) { [weak self] snap in
+            guard let value = snap.value as? [String : AnyObject], snap.exists() else { return }
+            self?.cellData = []
+            if let events = value["events"] as? [String:AnyObject] {
+                events.forEach {
+                    do {
+                        let model = try FirebaseDecoder().decode(Event.self, from: $0.value)
+                        self?.cellData?.append(model)
+                    } catch(let e) { print(e) }
+                }
+                self?.view?.update()
+            }
+        }
     }
     
     fileprivate func setupObserver() {
-        Database.database().reference().observe(.value) { [weak self] snap in
+        Database.database().reference().observe(.childAdded) { [weak self] snap in
             guard let value = snap.value as? [String : AnyObject], snap.exists() else { return }
             self?.cellData = []
             if let events = value["events"] as? [String:AnyObject] {

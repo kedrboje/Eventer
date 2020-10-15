@@ -125,7 +125,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="KXm-zQ-rkm"/>
                                         </constraints>
-                                        <color key="textColor" red="0.098039215686274508" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.14509803921568626" green="0.20392156862745098" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -145,7 +145,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="U5E-vV-Ngk"/>
                                         </constraints>
-                                        <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.14509803921568626" green="0.20392156862745098" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>

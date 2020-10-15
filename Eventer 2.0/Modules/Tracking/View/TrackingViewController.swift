@@ -65,7 +65,7 @@ private extension TrackingViewController {
     
     func evntLayout(){
         guard let x = getBadgeX(), let y = getBadgeY() else { return }
-        badgeView.frame = CGRect(x: 35*x, y: 35*y, width: 20, height: 20)
+        badgeView.frame = CGRect(x: 70*x, y: 70*y, width: 20, height: 20)
     }
     
     func setupBadgeView() {
@@ -105,6 +105,7 @@ private extension TrackingViewController {
     
     func getBadgeY() -> CGFloat? {
         guard let b = self.badge, let x = getBadgeX() else { return nil }
+        guard CGFloat(b.distanceTwo) * CGFloat(b.distanceTwo) > x * x else { return nil }
         let result = pow(CGFloat(b.distanceTwo) * CGFloat(b.distanceTwo) - x * x, 0.5)
         return result
     }
